@@ -36,7 +36,7 @@ class Request
         }
     }
 
-    //POST /class：新建一个班
+    //POST /item 新增一个商品
     private static function postItem($request_data)
     {
         if (!empty($request_data['name'])) {
@@ -49,7 +49,7 @@ class Request
         }
     }
 
-    //PUT /class/ID：更新某个指定班的信息（全部信息）
+    //PUT /item/ID：更新某个商品的信息）
     private static function putItem($request_data)
     {
         $item_id = (int)$request_data['itemId'];
@@ -83,7 +83,7 @@ class Request
         return self::$item_array;
     }
 
-    //DELETE /class/ID：删除某个班
+    //DELETE /item/ID：删除商品
     private static function deleteItem($request_data)
     {
         $item_id = (int)$request_data['itemId'];
